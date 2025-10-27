@@ -20,6 +20,8 @@ void draw() {
     textSize(70);
     fill(0);
     text("Click and Choose your character!", 150, 200);
+    textSize(40);
+    text("'w' to up, 's' to down", 430,730);
     player1(350,500, 40);
     player2(width - 350, 500, 10);
     if (mousePressed) {
@@ -88,7 +90,7 @@ void draw() {
   background(255,0,0);
   fill(255);
   textSize(100);
-  text("Game END!", 360, 230);
+  text("Game OVER!", 340, 230);
   textSize(60);
   text("score: " + score , 250, 430);
   text("Replay: press R", 600, 430);
@@ -101,10 +103,10 @@ void draw() {
 
 void keyPressed() {
   if (yp >= 0) {
-    if (key == 'w' || key == UP) yp += vyp;
+    if (key == 'w') yp += vyp;
   }
   if (yp <= height) { 
-    if (key == 's' || key == DOWN) yp -= vyp;
+    if (key == 's') yp -= vyp;
   }
 }
 
